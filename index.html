@@ -6,33 +6,36 @@
     <title>Bin2Dec</title>
     <script src="main.js"></script>  
     <link rel="stylesheet" href="style.css"/>
+
+     <!-- Code to calculate binary to decimal in real time -->
+     <script> 
+      setInterval(() => {
+        convert();
+      }, 200); 
+      </script>
+
   </head>
   <body>
-    <h1>Binary to Decimal Converter</h1>
-    <form>
-      <fieldset>
-        <legend>Input</legend>
+    <h1 align="center">Binary to Decimal Converter</h1>
+    <span id="msg"></span>
+    <br><br>
+    <form class = "container" autocomplete="off">
         <p>
           <label>Binary number:</label>
+          <br>
           <input
-            type="number" 
+            type="text" 
             id="bin_num"
             placeholder="Enter binary number"
             required
-          />
-          <input
-            type="button"
-            id="button"
-            value="Convert"
-            onclick="convert()"
-          />
-          <input type="reset" value="Clear" />
-          <br>
+          /> 
           <p> 
           <label>Decimal number:</label>
-          <input type="number" placeholder="Output" id="dec_num" readonly /> </p>
+          <br>
+          <input type="text" placeholder="Output" id="dec_num" readonly /> 
+          </p>
+          <input type="reset" value="Clear" />
         </p>
-      </fieldset>
     </form>
   </body>
 </html>
